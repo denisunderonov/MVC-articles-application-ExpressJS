@@ -15,18 +15,15 @@
   <body>
     <%- include('./navbar') %>
     <div class="container">
-      <h1>Статьи</h1>
+      <h1>Статьи <%= author.name %></h1>
       <ul>
         <% articles.forEach(article => { %>
-        <li>
-          <a href="/articles/<%= article.id %>"><%= article.title %></a> by
-          <a href="/authors/<%= article.Author.id %>"
-            ><%= article.Author.name %></a
-          >
-        </li>
+          <li>
+            <a href="/articles/<%= article.id %>"><%= article.title %></a>
+          </li>
         <% }); %>
       </ul>
-      <a class="btn btn-primary" href="/articles/new">Создать</a>
+      <a href="/authors">Все авторы</a>
     </div>
   </body>
 </html>
