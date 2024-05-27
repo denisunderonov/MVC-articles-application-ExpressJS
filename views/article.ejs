@@ -30,6 +30,8 @@
         <button class="btn btn-danger" type="submit">Удалить статью</button>
       </form>
 
+      <a href="/articles/<%=article.id%>/edit" class="btn btn-danger">Редактировать статью</a>
+
       <h3>Комментарии</h3>
       <% article.Comments.forEach(comment => { %>
       <div>

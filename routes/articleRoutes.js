@@ -6,6 +6,8 @@ router.get("/", articleController.getAllArticles);
 router.get("/new", articleController.showNewArticleForm);
 router.post("/", articleController.createArticle);
 router.get("/:id", articleController.getArticleById);
-router.post("/delete/:id", articleController.deleteArticle);
+router.get("/:id/edit", articleController.showEditArticleForm); 
+router.put("/:id", articleController.updateArticle); 
+router.delete("/:id", articleController.deleteArticle);
 
 module.exports = router;
